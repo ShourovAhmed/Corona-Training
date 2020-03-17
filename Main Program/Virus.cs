@@ -13,6 +13,11 @@ namespace Main_Program
         {
             DoomCountdown = r.Next(10, 21);
             killcode = r.Next(0, 100);
+            char letter1 = Convert.ToChar(r.Next(65, 91));
+            char letter2 = Convert.ToChar(r.Next(65, 91));
+            char letter3 = Convert.ToChar(r.Next(65, 91));
+
+            Naam = Convert.ToString(letter1 + letter2 + letter3) + r.Next(1,100);
         }
 
         //Properties
