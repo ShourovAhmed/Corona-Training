@@ -21,7 +21,7 @@ namespace Main_Program
         //Methoden
         public int TryKillCode()
         {
-            if (Oplossing != 1)
+            if (Oplossing != -1)
             {
                 return Oplossing;
             }
