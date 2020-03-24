@@ -44,6 +44,7 @@ namespace Main_Program
 
         public void ToonInfo()
         {
+
             Console.WriteLine($"Vaccin: {Naam}");
             Console.WriteLine($"Oplossing: {Oplossing}");
 

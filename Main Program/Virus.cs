@@ -54,7 +54,11 @@ namespace Main_Program
             if (testcode == killcode)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Succes, you have defeated {Naam}!");
+                Console.Write($"Succes, you have found a cure for ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(Naam);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("!");
                 Console.ResetColor();
                 vaccin.Oplossing = testcode;
                 return true;
