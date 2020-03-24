@@ -17,7 +17,7 @@ namespace Main_Program
             char letter2 = Convert.ToChar(r.Next(65, 91));
             char letter3 = Convert.ToChar(r.Next(65, 91));
 
-            Naam = Convert.ToString(letter1 + letter2 + letter3) + r.Next(1,100);
+            Naam = $"{letter1}{letter2}{letter3}{r.Next(1,100)}";
         }
 
         //Properties
@@ -29,7 +29,7 @@ namespace Main_Program
         public int DoomCountdown
         {
             get { return doomcountdown; }
-            set
+            private set
             {
                 if (doomcountdown <= 0)
                 {
@@ -38,19 +38,26 @@ namespace Main_Program
             }
         }
 
+
         //Methoden
         public bool TryVaccin(Vaccin vaccin)
         {
-            int code = vaccin.TryKillCode();
+            int testcode = vaccin.TryKillCode();
 
-            if (code == killcode)
+            if (testcode == killcode)
             {
-                code = vaccin.Oplossing;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Worked");
+                Console.ResetColor();
+                vaccin.Oplossing = testcode;
                 return true;
             }
             else
             {
-                doomcountdown--;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Failed");
+                Console.ResetColor();
+                DoomCountdown--;
                 return false;
             }
         }

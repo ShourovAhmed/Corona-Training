@@ -21,20 +21,21 @@ namespace Main_Program
         //Methoden
         public int TryKillCode()
         {
+            int code = r.Next(1, 101);
             if (Oplossing != -1)
             {
                 return Oplossing;
             }
             else
             {
-              return r.Next(1, 101);
+                return code;
             }
         }
 
         public void ToonInfo()
         {
             Console.WriteLine($"Vaccin: {Naam}");
-            Console.WriteLine(Oplossing);
+            Console.WriteLine($"Oplossing: {Oplossing}");
 
         }
 

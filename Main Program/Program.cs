@@ -9,22 +9,22 @@ namespace Main_Program
         {
             Virus corona = new Virus();
 
-            var vaccins = new List<Vaccin>(5);
-            for (int i = 0; i < vaccins.Count; i++)
+            var vaccins = new List<Vaccin>();
+            for (int i = 0; i < 101; i++)
             {
                 vaccins.Add(new Vaccin($"{i}"));
             }
 
-            //vaccins.Add(new Vaccin("1"));
-            //vaccins.Add(new Vaccin("2"));
-            //vaccins.Add(new Vaccin("3"));
-            //vaccins.Add(new Vaccin("4"));
-            //vaccins.Add(new Vaccin("5"));
-
+            /*for (int i = 0; i < vaccins.Count; i++)
+            {
+                vaccins[i].ToonInfo();
+            }*/
 
             for (int i = 0; i < vaccins.Count; i++)
             {
                 corona.TryVaccin(vaccins[i]);
+                vaccins[i].ToonInfo();
+                Console.WriteLine("\n");
             }
             ;
 
