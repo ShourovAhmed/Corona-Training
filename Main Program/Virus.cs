@@ -32,10 +32,14 @@ namespace Main_Program
             private set
             {
                 doomcountdown = value;
-                if (doomcountdown <= 0)
+                if (value <= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Game Over, yours sincerely {Naam}!");
+                    Console.Write($"Game Over, ");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write(Naam);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(" will take over the woooorld!");
                     Console.ResetColor();
                 }
             }
@@ -50,7 +54,7 @@ namespace Main_Program
             if (testcode == killcode)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Succes, you have defeated {Naam}");
+                Console.WriteLine($"Succes, you have defeated {Naam}!");
                 Console.ResetColor();
                 vaccin.Oplossing = testcode;
                 return true;

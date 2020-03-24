@@ -8,11 +8,21 @@ namespace Main_Program
     {
         Random r = new Random();
 
-        //Overloaded constructor
+        //Constructors
+        //Overloaded (default) constructor
         public Vaccin(string naam)
         {
             Naam = naam;
         }
+
+        //Constructor voor Vaccinatiecentrum klasse
+        public Vaccin (string naam, int solution)
+        {
+            Naam = naam;
+            Oplossing = solution;
+            TryKillCode();
+        }
+
 
         //Properties
         public string Naam { get; private set; }
